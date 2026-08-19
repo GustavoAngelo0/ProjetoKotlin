@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/title_travel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:gravity="center"
+            android:padding="16sp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginBottom="50sp"/>
+
+
+        <EditText
+            android:id="@+id/edit_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/distance"
+            android:layout_below="@id/title_travel"
+            android:padding="15sp"
+            android:textSize="25sp"
+            android:inputType="numberDecimal"
+            android:layout_margin="15dp"/>
+
+
+        <TextView
+            android:id="@+id/text_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25sp"
+            android:layout_below="@id/edit_distance"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:padding="5sp"
+            android:text="@string/total_km"
+            android:textSize="15sp"/>
+
+
+        <EditText
+            android:id="@+id/edit_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/text_distance"
+            android:hint="@string/price"
+            android:padding="15dp"
+            android:textSize="25sp"
+            android:inputType="numberDecimal"
+            android:layout_margin="15dp"/>
+
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25sp"
+            android:layout_below="@id/edit_price"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/price_liter"
+            android:textSize="15sp"/>
+
+
+        <EditText
+            android:id="@+id/edit_autonomy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/text_price"
+            android:hint="@string/Autonomy"
+            android:padding="15dp"
+            android:textSize="25sp"
+            android:inputType="numberDecimal"
+            android:layout_margin="15dp"/>
+
+
+        <TextView
+            android:id="@+id/text_autonomy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25sp"
+            android:layout_below="@id/edit_autonomy"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/kms_per_liter"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/text_total_spent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/text_autonomy"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/total_expense"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/text_show_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_total_spent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="@string/value_total"
+            android:textSize="40sp"
+            android:textColor="@color/light_blue"/>
+
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/text_show_total"
+            android:layout_height="60sp"
+            android:backgroundTint="@color/light_blue"
+            android:text="@string/calculate"
+            android:textSize="25sp"/>
+
+
+        <TextView
+            android:id="@+id/text_title_autonomia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_calculate"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Cálculo de autonomia"
+            android:textColor="#5A605D"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_inputs_autonomia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_title_autonomia"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edit_qtd_litros"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:hint="Qtd de litros"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/edit_km_percorridos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Km Percorridos"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_action_autonomia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_inputs_autonomia"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button_calcular_autonomia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Autonomia"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/text_resultado_autonomia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="KM/LITRO"
+                android:textColor="#5A605D"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_footer_autonomia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_action_autonomia"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:drawable/ic_menu_directions" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem surpresas com combustível"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
